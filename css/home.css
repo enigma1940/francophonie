@@ -1,5 +1,5 @@
 .title{text-align: center; font-size: 25px;}
 .menu div{text-align: center; line-height: 40px; color: #fff;}
 .titlearea{text-align: center; color: #fff; font-size: 20px; line-height: 45px;}
-.inscForm{background: #fff; border: solid 1px #333;}
-.inscErr{color: red; font-size: 16px; text-align: center; display: none;}
+.inscForm, .connForm{background: #fff; border: solid 1px #ccc;}
+.connErr, .inscErr{color: red; font-size: 16px; text-align: center; display: none;}

@@ -1,5 +1,11 @@
+$('.btnConn').click(function(){
+  $('.zone').css('display', 'none');
+  $('.connexion').toggle('drop');
+});
+
 $('.title').css('line-height', $('.logo').css('height'));
 $('.btnInsc').click(function(){
+  $('.zone').css('display', 'none');
   $('.inscription').toggle('drop');
 });
 var checkUser = false;
@@ -46,7 +52,6 @@ checkField($('.mail'), 5);
 $('.inscForm').submit(function(e){
   $('.inscErr').css('display', 'none');
   e.preventDefault();
-  $('.Berr').css('display','none');
   if(checkField($('.nom'), 1) && checkField($('.prenom'), 2) && checkUser && checkField($('.pass'), 7) &&
     checkField($('.contact'), 7) && checkConf($('.confpass'), $('.pass'))){
       $.post(
@@ -65,6 +70,28 @@ $('.inscForm').submit(function(e){
         }
       );
     }else{
-      $('.inscErr').toggle('drop');
+      $('.inscErr').toggle('bounce');
     }
+});
+checkField($('.userPass'), 7);
+$('.connForm').submit(function(e){
+  $('.connErr').css('display', 'none');
+  e.preventDefault();
+  if($('.userName').val().length>2 && $('.userPass').val().length>7){
+    $.post(
+      'php/suscribe.php',
+      {opt: 'connect',
+      uname: $('.userName').val(),
+      password: $('.userPass').val()},
+      function(data){
+        if(data=='success'){
+          document.location.href='connexion';
+        }else{
+          $('.connErr').toggle('bounce');
+        }
+      }
+    );
+  }else{
+    $('.connErr').toggle('bounce');
+  }
 });
