@@ -23,7 +23,7 @@
         //$u->setPhoto("");
         $u->create($bdd);
       break;
-    
+
     case 'connect':
         $user = new User();
         $user->setUname(htmlspecialchars($_POST['uname']));

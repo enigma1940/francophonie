@@ -1,6 +1,6 @@
 <?php
   class User{
-    private $id, $nom, $prenom, $uname, $password, $email, $contact;//$photo, $hasshop, $space;
+    private $id, $nom, $prenom, $uname, $password, $email, $contact;
 
     public function getId(){return $this->id;}
     public function getNom(){return $this->nom;}
@@ -10,7 +10,7 @@
     public function getEmail(){return $this->email;}
     public function getContact(){return $this->contact;}
     //public function getPhoto(){return $this->photo;}
-    
+
     public function setId($i){$this->id=$i;}
     public function setNom($i){$this->nom=$i;}
     public function setPrenom($i){$this->prenom=$i;}
@@ -63,12 +63,12 @@
         //':photo'=>$this->getPhoto()
       ));
     }
-    
+
     /*public function updatePhoto($bdd){
       $r = $bdd->prepare('UPDATE user SET photo=? WHERE id=?');
       $r->execute(array($this->getPhoto(), $this->getId()));
     }*/
-    
+
     public function userUpdate($bdd){
       $req=$bdd->prepare('UPDATE user SET nom=:nom, prenom=:prenom, uname=:uname, password=:password, email=:email, contact=:contact WHERE ID=:id');
       $req->execute(array(
