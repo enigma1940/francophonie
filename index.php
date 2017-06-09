@@ -16,10 +16,59 @@
       <div class="col m1 logo"><img src="fonts/power.png" style="width: 100%;" alt=""></div>
       <div class="col m11 title">error 404</div>
     </header>
-    <div class="col m1">
-      <center></center>
+    <div class="row menu grey darken-4">
+      <div class="col m1 offset-m5 waves-effect waves-light">Accueil</div>
+      <div class="col m1 waves-effect waves-light">Categories</div>
+      <div class="col m2 waves-effect waves-light">Publications Officielles</div>
+      <div class="col m1 waves-effect waves-light">Connexion</div>
+      <div class="col m1 waves-effect waves-light btnInsc">Inscription</div>
+      <div class="col m1 waves-effect waves-light">About</div>
     </div>
-    <div class="col m11">
+
+    <div class="row">
+      <div class="inscription col m8 l6 offset-m2 offset-l3" style="display: none;">
+        <div class="col m12 titlearea grey darken-3">Inscription</div>
+        <form class="inscForm col m12">
+          <div class="input-field col m6">
+            <input type="text" class="nom">
+            <label for="nom">Nom</label>
+          </div>
+          <div class="input-field col m6">
+            <input type="text" class="prenom">
+            <label for="prenom">Prenom</label>
+          </div>
+          <div class="input-field col m8">
+            <input type="text" class="uname">
+            <label for="uname">Nom d'utilisateur / Identifiant</label>
+          </div>
+          <div class="col m4">
+            <font class="pseudoOk" style="color: green; display: none;">Pseudo disponible</font>
+            <font class="pseudoBad" style="color: red; display: none;">Pseudo indisponible</font>
+          </div>
+          <div class="input-field col m12">
+            <input type="password" class="pass">
+            <label for="pass">Mot de passe</label>
+          </div>
+          <div class="input-field col m12">
+            <input type="password" class="confpass">
+            <label for="confpass">Confirmer le mot de passe</label>
+          </div>
+          <div class="input-field col m6">
+            <input type="email" class="mail">
+            <label for="mail">Mail (ex : mail@smth.com )</label>
+          </div>
+          <div class="input-field col m6">
+            <input type="text" class="contact">
+            <label for="contact">Telephone (ex : 72 45 78 96 )</label>
+          </div>
+          <div class="col m12 inscErr">Une erreur est survenue (Verifiez vos informations)</div>
+          <div class="col m12">
+            <button type="submit" class="btn waves-effect waves-light green darken-4">Inscription</button>
+            <button type="reset" class="btn waves-effect waves-light pink darken-4">Effacer</button>
+          </div>
+        </form>
+      </div>
+
 
     </div>
     <footer></footer>
