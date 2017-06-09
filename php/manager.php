@@ -1,10 +1,11 @@
 <?php
   include_once('connectdb.php');
   function chargerClasse($classe){
-		require 'classes/'.$classe.'.class.php';
+		require 'classes/'.lcfirst($classe).'.class.php';
 	}
-	spl_autoload_register('chargerClasse') ;
-  switch (variable) {
+	spl_autoload_register('chargerClasse');
+
+  switch (htmlspecialchars($_POST['option'])) {
     case 'value':
       # code...
       break;
